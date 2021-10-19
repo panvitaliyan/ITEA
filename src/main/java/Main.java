@@ -6,7 +6,8 @@ public class Main {
 
     public static void main(String[] args) {
         
-        Scanner scanner = new Scanner(System.in);
+        try(Scanner scanner = new Scanner(System.in))
+        {
         File currentFile = new File("./");        
         //while (true){
             
@@ -20,8 +21,8 @@ public class Main {
                     System.out.println(iFile.getName());
             }
             
-        //}
-        scanner.close();
+        }
+        
     }
     
 }
